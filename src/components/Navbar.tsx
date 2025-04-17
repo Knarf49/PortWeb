@@ -71,7 +71,7 @@ const Navbar = () => {
             <Tabs.Trigger
               key={tab.value}
               value={tab.value}
-              ref={(el) => (triggerRefs.current[tab.value] = el)}
+              ref={(el) => {triggerRefs.current[tab.value] = el}}
               className={`
                 relative z-10 px-4 py-2 rounded-full
                 transition-colors duration-200 text-sm font-medium
