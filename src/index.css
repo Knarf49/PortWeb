@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+@import "tailwindcss";
+
+:root {
+  font-family: "Space Grotesk","Inter";
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+
+body {
+  @apply 
+    text-base
+}
+
+
+h1 {
+  @apply 
+    text-3xl
+    font-bold
+}
+
+h2{
+  @apply 
+    text-xl 
+    font-medium
+}
+
+p {
+  @apply 
+    text-base 
+    leading-relaxed 
+  text-gray-700 
+  dark:text-gray-300 
+    mb-4;
+}
+
+.caption{
+  @apply 
+    text-sm 
+    text-slate-400
+}
+
+.code-snippet{
+  @apply 
+    font-mono 
+  bg-slate-800 
+  text-sky-400 
+    p-1 
+    rounded
+}
+
+.surface{
+  @apply bg-slate-800
+}
+.text-primary{
+  @apply text-slate-100
+}
+.text-muted{
+  @apply text-slate-400
+}
+.accent{
+  @apply 
+    text-sky-400
+    hover:text-sky-500
+}
+
+section{
+  @apply py-20 px-4 md:px-8;
+}
+
+.skills-icon {
+  @apply 
+    grid 
+    grid-cols-3 
+    mt-6 
+    rounded-xl 
+    gap-y-12 
+    shadow-md 
+    py-16 
+    text-5xl 
+    place-items-center
+    ;
+    
+}
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* index.css */
+.tab-trigger {
+  @apply px-4 py-2 text-white rounded-full bg-transparent hover:bg-zinc-700 transition-colors duration-300 cursor-pointer;
+}
+
+.tab-trigger[data-state='active'] {
+  @apply text-cyan-400 bg-zinc-800 border-2 transition-all duration-300;
+}
+
+/* index.css หรือไฟล์ global */
+.footer-content {
+  @apply 
+    flex 
+    flex-wrap 
+    items-center 
+    mt-1
+    font-medium 
+  text-gray-500 
+  dark:text-gray-400 
+}
+
+.footer-content li a {
+  @apply hover:underline me-4 md:me-6;
+}
