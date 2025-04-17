@@ -1,9 +1,17 @@
+import { motion } from "framer-motion"
+
+
 const About = () => {
   return (
     <div className="pt-28">
       <h1><span className="accent">/</span> about-me</h1>
       <p>Who am i?</p>
-      <section className="!py-12 flex flex-col md:flex-row items-center gap-10">
+      <motion.section 
+        className="!py-12 flex flex-col md:flex-row items-center gap-10"
+        initial={{y:30,opacity:0}}
+        animate={{y:0,opacity:1}}
+        transition={{ease: 'easeIn',delay:0.3}}
+      >
         <div className="md:w-2/3">
           <p>
             Hi! I’m a Frontend Developer with a focus on creating responsive, user-friendly web applications using Vue, React, JavaScript, and TypeScript. As a freelancer, I’ve worked with clients from various industries to deliver clean, functional websites that solve real-world problems.\
@@ -14,7 +22,7 @@ const About = () => {
         <div className="md:w-1/3">
           <img src="/ProfilePic.svg" alt="Profile pic" className="w-full max-w-xs mx-auto rounded-xl"/>
         </div>
-      </section>
+      </motion.section>
 
       {/* Timeline */}
       

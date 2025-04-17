@@ -15,7 +15,7 @@ const Home = () => {
         className="flex flex-col md:flex-row items-center justify-between gap-6 !pt-36"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, ease: "easeOut",delay:0.5 }}
+        transition={{ duration: 1, ease: "easeOut",delay:0.3 }}
       >
         <div className="max-w-xl">
           <h1 className="text-4xl font-bold">
