@@ -26,7 +26,7 @@ const ProjectCards = ({ projects }: Props) => {
             viewport={{ once: true }}
             className="bg-zinc-800 text-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
           >
-            <img src={project.image} alt={project.title} className="w-full h-48 object-cover" />
+            <img src={project.image} alt={project.title} className="w-full h-48 object-contain" />
             <div className="p-4">
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
               <p className="text-sm text-zinc-300 mb-4">{project.description}</p>
