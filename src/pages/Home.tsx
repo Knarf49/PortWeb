@@ -1,5 +1,5 @@
 import { MdEmail } from "react-icons/md";
-import { FaReact, FaJs, FaPython, FaJava } from "react-icons/fa";
+import { FaReact, FaJs, FaPython, FaJava, FaGithub } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
 import ProjectCards from "../components/ProjectCard";
 import { projects } from "../data/projects";
@@ -26,7 +26,7 @@ const Home = () => {
           </h2>
         </div>
         <img
-          src="/ProfilePic.svg"
+          src="/ProfilePicture.jpg"
           className="w-1/2 max-w-sm rounded-full bg-white"
           alt="Hero icon"
         />
@@ -52,23 +52,27 @@ const Home = () => {
       </section>
 
       {/* About Me */}
-      <section className="max-w-3xl">
-        <h1 className="text-2xl font-semibold mb-4">About Me</h1>
-        <p className="leading-8 text-gray-700">
-          Hi I'm Frank! I'm a <span className="accent">frontend developer</span>{" "}
-          passionate about building beautiful and functional websites. I
-          specialize in{" "}
-          <span className="accent">
-            React, TypeScript, Tailwind CSS, and Framer Motion.
-          </span>
-          I love learning new things and believe that great code is a blend of
-          logic and creativity.
-          <br />
-          <br />
-          In my free time, I enjoy experimenting with new projects, playing
-          music, and studying UX/UI design. Whether you're interested in working
-          together or just chatting about tech, feel free to reach out!
-        </p>
+      <section className="w-full md:flex items-center gap-x-16">
+        <div>
+          <h1 className="text-2xl font-semibold mb-4">About Me</h1>
+          <p className="leading-8 text-gray-700 max-w-3xl">
+            Hi I'm Frank! I'm a{" "}
+            <span className="accent">frontend developer</span> passionate about
+            building beautiful and functional websites. I specialize in{" "}
+            <span className="accent">
+              React, TypeScript, Tailwind CSS, and Framer Motion.
+            </span>
+            I love learning new things and believe that great code is a blend of
+            logic and creativity.
+            <br />
+            <br />
+            In my free time, I enjoy experimenting with new projects, playing
+            music, and studying UX/UI design. Whether you're interested in
+            working together or just chatting about tech, feel free to reach
+            out!
+          </p>
+        </div>
+        <FaReact className="text-[400px] h-fit mx-auto" />
       </section>
 
       {/* Contact */}
@@ -79,10 +83,19 @@ const Home = () => {
           requests or questions, don’t hesitate to contact me.
         </p>
         <div className="border w-full px-8 py-6 rounded-lg border-slate-700">
-          <h2 className="text-lg font-semibold mb-2">Message me here</h2>
-          <div className="flex items-center gap-x-2 text-gray-600">
-            <MdEmail className="text-xl mb-4" />
-            <p>SampleEmail@gmail.com</p>
+          <h2 className="text-lg font-semibold mb-6">Message me here</h2>
+          <div className="text-gray-600 space-y-4">
+            <div className="flex items-center gap-x-1">
+              <MdEmail className="text-xl" />
+              <p>wasutha1449@gmail.com</p>
+            </div>
+
+            <div className="flex items-center gap-x-1">
+              <FaGithub className="text-xl" />
+              <a href="https://github.com/Knarf49" className="text-white">
+                My Github
+              </a>
+            </div>
           </div>
         </div>
       </section>
